@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Trip</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Make a Trip</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#book">Book a Trip</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Explore the World with Us</h1>
+        <p>Your adventure begins here. Find the perfect destination and book your next trip today!</p>
+        <a href="#book" class="cta-button">Book Now</a>
+    </section>
+
+    <section id="destinations" class="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destination-grid">
+            <div class="destination-item">
+                <img src="images/paris.jpg" alt="Paris">
+                <h3>Paris, France</h3>
+            </div>
+            <div class="destination-item">
+                <img src="images/tokyo.jpg" alt="Tokyo">
+                <h3>Tokyo, Japan</h3>
+            </div>
+            <div class="destination-item">
+                <img src="images/new-york.jpg" alt="New York">
+                <h3>New York, USA</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="book" class="booking-form">
+        <h2>Book Your Trip</h2>
+        <form action="submit_booking.php" method="POST">
+            <label for="destination">Destination:</label>
+            <select id="destination" name="destination">
+                <option value="paris">Paris</option>
+                <option value="tokyo">Tokyo</option>
+                <option value="new-york">New York</option>
+            </select>
+
+            <label for="date">Travel Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="10" required>
+
+            <input type="submit" value="Book Now">
+        </form>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us at:</p>
+        <p>Email: info@makeatrip.com</p>
+        <p>Phone: +1 234 567 890</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Make a Trip. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
